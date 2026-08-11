@@ -5,7 +5,7 @@ import { ArrowLeft, FileText, Clock, Scale, ShieldAlert } from 'lucide-react';
 
 export const TermsOfService: React.FC = () => {
   useEffect(() => {
-    document.title = 'QRFlow | Terms of Service';
+    document.title = 'QRMix | Terms of Service';
   }, []);
 
   const sections = [
@@ -13,7 +13,7 @@ export const TermsOfService: React.FC = () => {
       num: 1,
       title: 'Introduction',
       content:
-        'Welcome to QRFlow. These Terms of Service ("Terms") govern your access to and use of the QRFlow website, software tools, APIs, dynamic QR code management platform, and related services ("Services").',
+        'Welcome to QRMix. These Terms of Service ("Terms") govern your access to and use of the QRMix website, software tools, APIs, dynamic QR code management platform, and related services ("Services").',
     },
     {
       num: 2,
@@ -25,7 +25,7 @@ export const TermsOfService: React.FC = () => {
       num: 3,
       title: 'Account Registration',
       content:
-        'You must provide accurate, complete, and updated information when creating a QRFlow account. You are solely responsible for safeguarding your login credentials and for all activities that occur under your account.',
+        'You must provide accurate, complete, and updated information when creating a QRMix account. You are solely responsible for safeguarding your login credentials and for all activities that occur under your account.',
     },
     {
       num: 4,
@@ -37,13 +37,13 @@ export const TermsOfService: React.FC = () => {
       num: 5,
       title: 'QR Code Services',
       content:
-        'QRFlow grants you a non-exclusive, non-transferable, revocable license to create, customize, download, and distribute static and dynamic QR codes generated through our platform for commercial or personal use.',
+        'QRMix grants you a non-exclusive, non-transferable, revocable license to create, customize, download, and distribute static and dynamic QR codes generated through our platform for commercial or personal use.',
     },
     {
       num: 6,
       title: 'Dynamic QR Codes',
       content:
-        'Dynamic QR codes route traffic through QRFlow redirect servers. While active under your plan, you may update destination URLs at any time. If an account is terminated or plan limits are exceeded, dynamic routing may be temporarily restricted.',
+        'Dynamic QR codes route traffic through QRMix redirect servers. While active under your plan, you may update destination URLs at any time. If an account is terminated or plan limits are exceeded, dynamic routing may be temporarily restricted.',
     },
     {
       num: 7,
@@ -61,7 +61,7 @@ export const TermsOfService: React.FC = () => {
       num: 9,
       title: 'Subscription Plans',
       content:
-        'QRFlow offers Free, Pro, and Enterprise subscription tiers. Feature sets, dynamic QR code allocations, and scan limits per plan are detailed on our Pricing page.',
+        'QRMix offers Free, Pro, and Enterprise subscription tiers. Feature sets, dynamic QR code allocations, and scan limits per plan are detailed on our Pricing page.',
     },
     {
       num: 10,
@@ -91,31 +91,31 @@ export const TermsOfService: React.FC = () => {
       num: 14,
       title: 'Acceptable Use',
       content:
-        'You agree to use QRFlow in compliance with all applicable local, national, and international laws, regulations, and industry standards.',
+        'You agree to use QRMix in compliance with all applicable local, national, and international laws, regulations, and industry standards.',
     },
     {
       num: 15,
       title: 'Prohibited Activities',
       content:
-        'You are strictly prohibited from using QRFlow to distribute malware, phishing links, counterfeit goods promotions, deceptive financial schemes, hate speech, explicit illegal content, or unsolicited spam.',
+        'You are strictly prohibited from using QRMix to distribute malware, phishing links, counterfeit goods promotions, deceptive financial schemes, hate speech, explicit illegal content, or unsolicited spam.',
     },
     {
       num: 16,
       title: 'Intellectual Property',
       content:
-        'The QRFlow platform, source code, visual branding, logos, graphics, and trademarks are owned exclusively by QRFlow. You retain all ownership rights to your original uploaded logos and custom content.',
+        'The QRMix platform, source code, visual branding, logos, graphics, and trademarks are owned exclusively by QRMix. You retain all ownership rights to your original uploaded logos and custom content.',
     },
     {
       num: 17,
       title: 'User Content',
       content:
-        'You grant QRFlow a global, non-exclusive license to host, display, and transmit your uploaded assets solely for the purpose of operating and displaying your QR codes and landing pages.',
+        'You grant QRMix a global, non-exclusive license to host, display, and transmit your uploaded assets solely for the purpose of operating and displaying your QR codes and landing pages.',
     },
     {
       num: 18,
       title: 'Third-Party Services',
       content:
-        'QR codes generated on QRFlow may link to third-party destinations. We do not endorse, control, or assume liability for third-party websites or services linked through user campaigns.',
+        'QR codes generated on QRMix may link to third-party destinations. We do not endorse, control, or assume liability for third-party websites or services linked through user campaigns.',
     },
     {
       num: 19,
@@ -133,13 +133,13 @@ export const TermsOfService: React.FC = () => {
       num: 21,
       title: 'Limitation of Liability',
       content:
-        'TO THE MAXIMUM EXTENT PERMITTED BY LAW, QRFLOW SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS OR DATA.',
+        'TO THE MAXIMUM EXTENT PERMITTED BY LAW, QRMix SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS OR DATA.',
     },
     {
       num: 22,
       title: 'Indemnification',
       content:
-        'You agree to defend, indemnify, and hold harmless QRFlow and its officers from any claims, liabilities, damages, or legal expenses arising from your violation of these Terms or misuse of the platform.',
+        'You agree to defend, indemnify, and hold harmless QRMix and its officers from any claims, liabilities, damages, or legal expenses arising from your violation of these Terms or misuse of the platform.',
     },
     {
       num: 23,
@@ -151,7 +151,7 @@ export const TermsOfService: React.FC = () => {
       num: 24,
       title: 'Changes to Terms',
       content:
-        'We may revise these Terms at any time. Continued usage of QRFlow after revised Terms are posted constitutes acceptance of the modified agreement.',
+        'We may revise these Terms at any time. Continued usage of QRMix after revised Terms are posted constitutes acceptance of the modified agreement.',
     },
     {
       num: 25,
@@ -243,7 +243,7 @@ export const TermsOfService: React.FC = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-blue-600/25 transition-all cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to QRFlow Home</span>
+            <span>Return to QRMix Home</span>
           </Link>
         </div>
       </div>

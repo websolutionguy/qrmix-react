@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { QrCode, ArrowUp, Github, Twitter, Linkedin, ShieldCheck } from 'lucide-react';
+import Logo from '../images/qrmix-logo.png';
 
 interface FooterProps {
   onSuccessToast: (msg: string) => void;
@@ -56,10 +57,11 @@ export const Footer: React.FC<FooterProps> = ({ onSuccessToast }) => {
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white">
-                <QrCode className="w-4 h-4" />
+              {/* <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white"> */}
+              <div>
+                <img src={Logo} alt="QRMix Logo" className="w-10 h-10" />
               </div>
-              <span className="text-xl font-extrabold text-white tracking-tight">QRFlow</span>
+              <span className="text-xl font-extrabold text-white tracking-tight">QRMix</span>
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -150,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({ onSuccessToast }) => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div>© 2026 QRFlow. All rights reserved.</div>
+          <div>© 2026 QRMix. All rights reserved.</div>
 
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">

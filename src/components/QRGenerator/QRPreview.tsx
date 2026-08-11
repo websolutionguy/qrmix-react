@@ -54,7 +54,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({
       const pngUrl = canvas.toDataURL('image/png');
       const downloadLink = document.createElement('a');
       downloadLink.href = pngUrl;
-      downloadLink.download = `QRFlow-code-${Date.now()}.png`;
+      downloadLink.download = `QRMix-code-${Date.now()}.png`;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
@@ -74,7 +74,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({
       const svgUrl = URL.createObjectURL(svgBlob);
       const downloadLink = document.createElement('a');
       downloadLink.href = svgUrl;
-      downloadLink.download = `QRFlow-code-${Date.now()}.svg`;
+      downloadLink.download = `QRMix-code-${Date.now()}.svg`;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
@@ -121,7 +121,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({
           <div className="hidden">
             <QRCodeCanvas
               id="qr-canvas-element"
-              value={payload || 'https://qrflow.app'}
+              value={payload || 'https://QRMix.app'}
               size={Math.max(customization.size * 2, 512)}
               fgColor={customization.fgColor}
               bgColor={customization.bgColor}
@@ -134,7 +134,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({
           {/* Visible SVG QR for crisp display */}
           <QRCodeSVG
             id="qr-svg-element"
-            value={payload || 'https://qrflow.app'}
+            value={payload || 'https://QRMix.app'}
             size={Math.min(customization.size, 260)}
             fgColor={customization.fgColor}
             bgColor={customization.bgColor}

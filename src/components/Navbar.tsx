@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { QrCode, Menu, X, ArrowRight } from 'lucide-react';
+import Logo from '../images/qrmix-logo.png';
 
 interface NavbarProps {
   onOpenAuth: (mode: 'signin' | 'signup') => void;
@@ -63,12 +64,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth }) => {
           to="/"
           className="flex items-center gap-2.5 group text-left cursor-pointer focus:outline-none"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
-            <QrCode className="w-5 h-5 text-white" />
+          {/* <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200"> */}
+          <div>
+            {/* <QrCode className="w-5 h-5 text-white" /> */}
+            <img src={Logo} alt="QRMix Logo" className="w-10 h-10" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-extrabold text-white tracking-tight flex items-center gap-1">
-              QRFlow
+              QRMix
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
             </span>
           </div>

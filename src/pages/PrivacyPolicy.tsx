@@ -5,7 +5,7 @@ import { ArrowLeft, ShieldCheck, Clock, FileText, Lock, AlertCircle } from 'luci
 
 export const PrivacyPolicy: React.FC = () => {
   useEffect(() => {
-    document.title = 'QRFlow | Privacy Policy';
+    document.title = 'QRMix | Privacy Policy';
   }, []);
 
   return (
@@ -60,7 +60,7 @@ export const PrivacyPolicy: React.FC = () => {
         <div className="mb-10 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs flex items-start gap-3">
           <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong>Legal Notice:</strong> This document outlines QRFlow's standard data processing practices. It is provided for informational and platform transparency purposes and should be reviewed with qualified legal counsel for specific jurisdictional compliance.
+            <strong>Legal Notice:</strong> This document outlines QRMix's standard data processing practices. It is provided for informational and platform transparency purposes and should be reviewed with qualified legal counsel for specific jurisdictional compliance.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export const PrivacyPolicy: React.FC = () => {
               <span className="text-blue-400">1.</span> Introduction
             </h2>
             <p>
-              At QRFlow ("we", "our", or "us"), operated under high data security standards, we prioritize protecting the privacy of our creators, customers, and scanners. This Privacy Policy describes how we collect, use, store, and protect your personal information when you use our website, mobile application, dynamic link shortener, and QR code generation platform.
+              At QRMix ("we", "our", or "us"), operated under high data security standards, we prioritize protecting the privacy of our creators, customers, and scanners. This Privacy Policy describes how we collect, use, store, and protect your personal information when you use our website, mobile application, dynamic link shortener, and QR code generation platform.
             </p>
           </section>
 
@@ -110,7 +110,7 @@ export const PrivacyPolicy: React.FC = () => {
               <span className="text-blue-400">4.</span> Automatically Collected Information
             </h2>
             <p>
-              When you visit our site or scan a QRFlow dynamic code, our system automatically logs generalized scan telemetry data:
+              When you visit our site or scan a QRMix dynamic code, our system automatically logs generalized scan telemetry data:
             </p>
             <ul className="list-disc pl-5 space-y-1 text-slate-300">
               <li>Device type (iOS, Android, Windows, Mac).</li>
@@ -126,7 +126,7 @@ export const PrivacyPolicy: React.FC = () => {
               <span className="text-blue-400">5.</span> QR Code and Campaign Data
             </h2>
             <p>
-              QRFlow acts as a processor for user-generated QR campaigns. Data encoded directly into static QR codes (such as plain text or standard URLs) resides permanently within the printed image itself. Dynamic QR code data is managed through our edge servers, allowing account owners to modify destination targets without changing the physical print asset.
+              QRMix acts as a processor for user-generated QR campaigns. Data encoded directly into static QR codes (such as plain text or standard URLs) resides permanently within the printed image itself. Dynamic QR code data is managed through our edge servers, allowing account owners to modify destination targets without changing the physical print asset.
             </p>
           </section>
 
@@ -230,7 +230,7 @@ export const PrivacyPolicy: React.FC = () => {
               <span className="text-blue-400">15.</span> Children's Privacy
             </h2>
             <p>
-              QRFlow is intended for general business audiences and does not knowingly collect personal information from children under the age of 13.
+              QRMix is intended for general business audiences and does not knowingly collect personal information from children under the age of 13.
             </p>
           </section>
 
@@ -276,7 +276,7 @@ export const PrivacyPolicy: React.FC = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-blue-600/25 transition-all cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to QRFlow Home</span>
+            <span>Return to QRMix Home</span>
           </Link>
         </div>
       </div>

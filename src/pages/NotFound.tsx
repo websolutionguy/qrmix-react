@@ -5,7 +5,7 @@ import { QrCode, Home as HomeIcon, AlertCircle } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
   useEffect(() => {
-    document.title = 'QRFlow | 404 Page Not Found';
+    document.title = 'QRMix | 404 Page Not Found';
   }, []);
 
   return (

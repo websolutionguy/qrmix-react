@@ -19,7 +19,7 @@ interface ContactUsProps {
 
 export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
   useEffect(() => {
-    document.title = 'QRFlow | Contact Us';
+    document.title = 'QRMix | Contact Us';
   }, []);
 
   const [formData, setFormData] = useState({
@@ -107,7 +107,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
             How Can We Help?
           </h1>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-            Have a question about QRFlow, your QR campaigns, billing, or our platform? We'd love to hear from you.
+            Have a question about QRMix, your QR campaigns, billing, or our platform? We'd love to hear from you.
           </p>
         </motion.div>
 

@@ -18,7 +18,7 @@ import {
 
 export const AboutUs: React.FC = () => {
   useEffect(() => {
-    document.title = 'QRFlow | About Us';
+    document.title = 'QRMix | About Us';
   }, []);
 
   const features = [
@@ -92,14 +92,14 @@ export const AboutUs: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5" /> Next-Generation Campaign Infrastructure
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-            About <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">QRFlow</span>
+            About <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">QRMix</span>
           </h1>
           <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-            QRFlow is a modern QR management platform designed to help businesses, agencies, and creators build, track, and optimize high-converting physical-to-digital customer experiences.
+            QRMix is a modern QR management platform designed to help businesses, agencies, and creators build, track, and optimize high-converting physical-to-digital customer experiences.
           </p>
         </motion.div>
 
-        {/* What is QRFlow & Mission */}
+        {/* What is QRMix & Mission */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,9 +110,9 @@ export const AboutUs: React.FC = () => {
             <div className="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
               <QrCode className="w-6 h-6" />
             </div>
-            <h2 className="text-xl font-bold text-white">What is QRFlow?</h2>
+            <h2 className="text-xl font-bold text-white">What is QRMix?</h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              QRFlow combines ultra-fast vector QR code generation with dynamic link routing and no-code mobile landing page construction. We turn static print assets into interactive, measurable digital touchpoints.
+              QRMix combines ultra-fast vector QR code generation with dynamic link routing and no-code mobile landing page construction. We turn static print assets into interactive, measurable digital touchpoints.
             </p>
           </motion.div>
 
@@ -164,13 +164,13 @@ export const AboutUs: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Why QRFlow & Who We Serve */}
+        {/* Why QRMix & Who We Serve */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Why QRFlow */}
+          {/* Why QRMix */}
           <div className="bg-[#0D1426] border border-white/10 rounded-3xl p-8 space-y-5">
             <h2 className="text-2xl font-bold text-white flex items-center gap-2">
               <ShieldCheck className="w-6 h-6 text-blue-400" />
-              Why Choose QRFlow?
+              Why Choose QRMix?
             </h2>
             <ul className="space-y-3 text-xs sm:text-sm text-slate-300">
               <li className="flex items-start gap-2.5">

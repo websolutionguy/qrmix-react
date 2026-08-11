@@ -15,7 +15,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ onOpenAuth, onSuccessToast }) => {
   useEffect(() => {
-    document.title = 'QRFlow | Smart QR Code Generator & Dynamic Link Platform';
+    document.title = 'QRMix | Smart QR Code Generator & Dynamic Link Platform';
   }, []);
 
   const scrollToSection = (id: string) => {

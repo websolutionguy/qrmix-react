@@ -5,7 +5,7 @@ import { ArrowLeft, Cookie, Shield, Check, Info, Settings, Clock } from 'lucide-
 
 export const CookiePolicy: React.FC = () => {
   useEffect(() => {
-    document.title = 'QRFlow | Cookie Policy';
+    document.title = 'QRMix | Cookie Policy';
   }, []);
 
   const [cookiePreferences, setCookiePreferences] = useState({
@@ -31,9 +31,9 @@ export const CookiePolicy: React.FC = () => {
     },
     {
       num: 2,
-      title: 'How QRFlow Uses Cookies',
+      title: 'How QRMix Uses Cookies',
       content:
-        'QRFlow uses cookies and related browser storage mechanisms (such as localStorage and session storage) to maintain active user login sessions, preserve custom QR code styling choices, monitor system bandwidth performance, and safeguard public endpoints against automated abuse.',
+        'QRMix uses cookies and related browser storage mechanisms (such as localStorage and session storage) to maintain active user login sessions, preserve custom QR code styling choices, monitor system bandwidth performance, and safeguard public endpoints against automated abuse.',
     },
     {
       num: 3,
@@ -269,7 +269,7 @@ export const CookiePolicy: React.FC = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-blue-600/25 transition-all cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to QRFlow Home</span>
+            <span>Return to QRMix Home</span>
           </Link>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, QrCode, ArrowRight, Github, Mail, Lock, Sparkles } from 'lucide-react';
+import Logo from '../images/qrmix-logo.png';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -23,7 +24,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     e.preventDefault();
     if (!email) return;
     if (mode === 'signup') {
-      onSuccessToast(`Welcome to QRFlow! Workspace created for ${email}`);
+      onSuccessToast(`Welcome to QRMix! Workspace created for ${email}`);
     } else {
       onSuccessToast(`Signed in successfully as ${email}`);
     }
@@ -60,12 +61,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             </button>
 
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <QrCode className="w-6 h-6 text-white" />
+              {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20"> */}
+              <div>
+                <img src={Logo} alt="QRMix Logo" className="w-10 h-10" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white tracking-tight">
-                  {mode === 'signup' ? 'Create QRFlow Account' : 'Welcome Back'}
+                  {mode === 'signup' ? 'Create QRMix Account' : 'Welcome Back'}
                 </h3>
                 <p className="text-xs text-slate-400">
                   {mode === 'signup'

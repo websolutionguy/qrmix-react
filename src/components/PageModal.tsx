@@ -133,7 +133,7 @@ export const PageModal: React.FC<PageModalProps> = ({
                 <h2 className="text-base font-bold text-white tracking-tight">
                   {tabs.find((t) => t.id === activeTab)?.label}
                 </h2>
-                <span className="text-[11px] text-slate-400">QRFlow Platform Information</span>
+                <span className="text-[11px] text-slate-400">QRMix Platform Information</span>
               </div>
             </div>
 
@@ -172,14 +172,14 @@ export const PageModal: React.FC<PageModalProps> = ({
                 <div className="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0" />
                   <span>
-                    <strong>Effective Date:</strong> August 11, 2026. QRFlow is built with strict privacy standards, ensuring scan metrics are processed securely and transparently.
+                    <strong>Effective Date:</strong> August 11, 2026. QRMix is built with strict privacy standards, ensuring scan metrics are processed securely and transparently.
                   </span>
                 </div>
 
                 <div>
                   <h3 className="text-base font-bold text-white mb-2">1. Overview & Commitment</h3>
                   <p>
-                    QRFlow ("we", "our", or "us") respects your privacy. This Privacy Policy describes how we collect, use, store, and protect information when you use our web platform, dynamic link generator, analytics dashboard, and mobile landing page tools.
+                    QRMix ("we", "our", or "us") respects your privacy. This Privacy Policy describes how we collect, use, store, and protect information when you use our web platform, dynamic link generator, analytics dashboard, and mobile landing page tools.
                   </p>
                 </div>
 
@@ -227,20 +227,20 @@ export const PageModal: React.FC<PageModalProps> = ({
                 <div className="p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs flex items-center gap-3">
                   <FileText className="w-5 h-5 text-indigo-400 shrink-0" />
                   <span>
-                    <strong>Terms Summary:</strong> By using QRFlow, you agree to comply with our acceptable use policy. Illegal content, malware links, or phishing via dynamic QR codes is strictly forbidden.
+                    <strong>Terms Summary:</strong> By using QRMix, you agree to comply with our acceptable use policy. Illegal content, malware links, or phishing via dynamic QR codes is strictly forbidden.
                   </span>
                 </div>
 
                 <div>
                   <h3 className="text-base font-bold text-white mb-2">1. Acceptance of Terms</h3>
                   <p>
-                    By accessing or using QRFlow, creating dynamic QR campaigns, or downloading generated codes, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                    By accessing or using QRMix, creating dynamic QR campaigns, or downloading generated codes, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-base font-bold text-white mb-2">2. Acceptable Use Policy</h3>
-                  <p className="mb-2">You agree NOT to use QRFlow to generate codes or redirection links that:</p>
+                  <p className="mb-2">You agree NOT to use QRMix to generate codes or redirection links that:</p>
                   <ul className="list-disc pl-5 space-y-1 text-slate-300">
                     <li>Promote malware, spyware, unauthorized downloads, or phishing websites.</li>
                     <li>Violate local, state, national, or international consumer protection laws.</li>
@@ -363,7 +363,7 @@ export const PageModal: React.FC<PageModalProps> = ({
                     Connecting Offline Touchpoints to Digital Growth
                   </h3>
                   <p className="text-slate-300 text-xs sm:text-sm">
-                    QRFlow was founded with a single mission: to transform standard static QR codes into intelligent, dynamic digital portals with real-time analytics and zero coding required.
+                    QRMix was founded with a single mission: to transform standard static QR codes into intelligent, dynamic digital portals with real-time analytics and zero coding required.
                   </p>
                 </div>
 
@@ -449,8 +449,8 @@ export const PageModal: React.FC<PageModalProps> = ({
                         <Mail className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">Email Us</div>
-                          <div className="text-[11px] text-slate-400">support@qrflow.app</div>
-                          <div className="text-[11px] text-slate-400">sales@qrflow.app</div>
+                          <div className="text-[11px] text-slate-400">support@QRMix.app</div>
+                          <div className="text-[11px] text-slate-400">sales@QRMix.app</div>
                         </div>
                       </div>
 
