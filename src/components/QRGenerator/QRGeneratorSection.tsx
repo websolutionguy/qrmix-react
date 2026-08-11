@@ -22,7 +22,7 @@ export const QRGeneratorSection: React.FC<QRGeneratorSectionProps> = ({ onSucces
   const [selectedType, setSelectedType] = useState<QRType>('url');
 
   // Form states
-  const [url, setUrl] = useState('https://QRMix.app');
+  const [url, setUrl] = useState('https://qrflow.app');
 
   const [vcard, setVcard] = useState<VCardData>({
     firstName: 'Sarah',
@@ -36,7 +36,7 @@ export const QRGeneratorSection: React.FC<QRGeneratorSectionProps> = ({ onSucces
 
   const [whatsapp, setWhatsapp] = useState<WhatsAppData>({
     phone: '15550192834',
-    message: 'Hello! I am interested in learning more about QRMix dynamic campaigns.',
+    message: 'Hello! I am interested in learning more about QRFlow dynamic campaigns.',
   });
 
   const [wifi, setWifi] = useState<WifiData>({
@@ -47,15 +47,15 @@ export const QRGeneratorSection: React.FC<QRGeneratorSectionProps> = ({ onSucces
   });
 
   const [menu, setMenu] = useState<MenuData>({
-    menuUrl: 'https://menu.QRMix.app/bistro-lumiere',
+    menuUrl: 'https://menu.qrflow.app/bistro-lumiere',
     restaurantName: 'Bistro Lumière',
     tableNumber: 'Table 14',
   });
 
   const [email, setEmail] = useState<EmailData>({
-    email: 'support@QRMix.app',
+    email: 'support@qrflow.app',
     subject: 'Inquiry from QR Code Campaign',
-    body: 'Hi QRMix team, I would like to schedule a platform demo.',
+    body: 'Hi QRFlow team, I would like to schedule a platform demo.',
   });
 
   // Customization state
@@ -72,7 +72,7 @@ export const QRGeneratorSection: React.FC<QRGeneratorSectionProps> = ({ onSucces
   const payload = useMemo(() => {
     switch (selectedType) {
       case 'url':
-        return url || 'https://QRMix.app';
+        return url || 'https://qrflow.app';
       case 'vcard':
         return `BEGIN:VCARD\nVERSION:3.0\nN:${vcard.lastName};${vcard.firstName}\nFN:${vcard.firstName} ${vcard.lastName}\nORG:${vcard.company}\nTITLE:${vcard.title}\nTEL:${vcard.phone}\nEMAIL:${vcard.email}\nEND:VCARD`;
       case 'whatsapp':
@@ -82,13 +82,13 @@ export const QRGeneratorSection: React.FC<QRGeneratorSectionProps> = ({ onSucces
       case 'wifi':
         return `WIFI:S:${wifi.ssid};T:${wifi.encryption};P:${wifi.password};;`;
       case 'menu':
-        return menu.menuUrl || 'https://menu.QRMix.app';
+        return menu.menuUrl || 'https://menu.qrflow.app';
       case 'email':
         return `mailto:${email.email}?subject=${encodeURIComponent(
           email.subject
         )}&body=${encodeURIComponent(email.body)}`;
       default:
-        return 'https://QRMix.app';
+        return 'https://qrflow.app';
     }
   }, [selectedType, url, vcard, whatsapp, wifi, menu, email]);
 

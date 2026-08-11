@@ -65,7 +65,7 @@ export const UseCases: React.FC<UseCasesProps> = ({ onSelectUseCase }) => {
             Built for Every Industry & Workflow
           </h2>
           <p className="text-base text-slate-300">
-            See how high-performing teams use QRMix to convert physical touchpoints into digital engagement.
+            See how high-performing teams use QRFlow to convert physical touchpoints into digital engagement.
           </p>
 
           {/* Filter Pills / Tabs */}

@@ -23,7 +23,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     e.preventDefault();
     if (!email) return;
     if (mode === 'signup') {
-      onSuccessToast(`Welcome to QRMix! Workspace created for ${email}`);
+      onSuccessToast(`Welcome to QRFlow! Workspace created for ${email}`);
     } else {
       onSuccessToast(`Signed in successfully as ${email}`);
     }
@@ -65,7 +65,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white tracking-tight">
-                  {mode === 'signup' ? 'Create QRMix Account' : 'Welcome Back'}
+                  {mode === 'signup' ? 'Create QRFlow Account' : 'Welcome Back'}
                 </h3>
                 <p className="text-xs text-slate-400">
                   {mode === 'signup'

@@ -66,7 +66,7 @@ export const QRForm: React.FC<QRFormProps> = ({
               type="url"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              placeholder="https://QRMix.app"
+              placeholder="https://qrflow.app"
               className="w-full bg-[#070B16] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
             />
           </div>
@@ -221,7 +221,7 @@ export const QRForm: React.FC<QRFormProps> = ({
                 type="url"
                 value={menu.menuUrl}
                 onChange={(e) => setMenu({ ...menu, menuUrl: e.target.value })}
-                placeholder="https://menu.QRMix.app/bistro-lumiere"
+                placeholder="https://menu.qrflow.app/bistro-lumiere"
                 className="w-full bg-[#070B16] border border-white/10 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-blue-500"
               />
             </div>
@@ -442,7 +442,7 @@ export const QRForm: React.FC<QRFormProps> = ({
                   : 'bg-[#070B16] border-white/10 text-slate-400 hover:text-white'
               }`}
             >
-              {customization.includeLogo ? '✓ QRMix Badge' : 'No Logo'}
+              {customization.includeLogo ? '✓ QRFlow Badge' : 'No Logo'}
             </button>
           </div>
         </div>

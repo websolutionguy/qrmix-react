@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { QRGeneratorSection } from './components/QRGenerator/QRGeneratorSection';
-import { Features } from './components/Features';
-import { UseCases } from './components/UseCases';
-import { AnalyticsPreview } from './components/AnalyticsPreview';
-import { MobilePagePreview } from './components/MobilePagePreview';
-import { Pricing } from './components/Pricing';
-import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 import { AuthModal } from './components/AuthModal';
 import { ToastContainer } from './components/Toast';
+import { ScrollToTop } from './components/ScrollToTop';
+
+import { Home } from './pages/Home';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
+import { CookiePolicy } from './pages/CookiePolicy';
+import { AboutUs } from './pages/AboutUs';
+import { ContactUs } from './pages/ContactUs';
+import { NotFound } from './pages/NotFound';
 
 export default function App() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signup');
+
   const [toasts, setToasts] = useState<
     Array<{ id: string; type: 'success' | 'error' | 'info'; message: string }>
   >([]);
@@ -33,54 +36,34 @@ export default function App() {
     setAuthModalOpen(true);
   };
 
-  const handleScrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-[#050914] text-slate-100 font-sans selection:bg-blue-600 selection:text-white antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#050914] text-slate-100 font-sans selection:bg-blue-600 selection:text-white antialiased overflow-x-hidden flex flex-col justify-between">
+      <ScrollToTop />
+
       {/* Navigation */}
-      <Navbar onOpenAuth={handleOpenAuth} onScrollToSection={handleScrollToSection} />
+      <Navbar onOpenAuth={handleOpenAuth} />
 
-      {/* Main Content Sections */}
-      <main>
-        <Hero
-          onScrollToGenerator={() => handleScrollToSection('generator')}
-          onScrollToFeatures={() => handleScrollToSection('features')}
-          onOpenAuth={() => handleOpenAuth('signup')}
-        />
-
-        <QRGeneratorSection onSuccessToast={addToast} />
-
-        <Features />
-
-        <UseCases
-          onSelectUseCase={(id) => {
-            handleScrollToSection('generator');
-            addToast(`Selected ${id} template flow! Customize your QR code above.`, 'info');
-          }}
-        />
-
-        <AnalyticsPreview />
-
-        <MobilePagePreview
-          onOpenAuth={() => handleOpenAuth('signup')}
-          onSuccessToast={addToast}
-        />
-
-        <Pricing onOpenAuth={handleOpenAuth} onSuccessToast={addToast} />
-
-        <CTA
-          onScrollToGenerator={() => handleScrollToSection('generator')}
-          onScrollToFeatures={() => handleScrollToSection('features')}
-        />
+      {/* Main Content & Routes */}
+      <main className="flex-grow">
+        <Routes>
+          <Route
+            path="/"
+            element={<Home onOpenAuth={handleOpenAuth} onSuccessToast={addToast} />}
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route
+            path="/contact-us"
+            element={<ContactUs onSuccessToast={addToast} />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
 
-      {/* Footer */}
-      <Footer onScrollToSection={handleScrollToSection} onSuccessToast={addToast} />
+      {/* Shared Footer */}
+      <Footer onSuccessToast={addToast} />
 
       {/* Auth Modal */}
       <AuthModal

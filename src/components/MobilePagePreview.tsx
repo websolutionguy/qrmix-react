@@ -128,7 +128,7 @@ export const MobilePagePreview: React.FC<MobilePagePreviewProps> = ({
               <div className="pt-6 pb-4 px-3 space-y-4 text-center">
                 {/* Brand Badge */}
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-bold text-blue-400">
-                  <Sparkles className="w-3 h-3" /> QRMix Micro-Page
+                  <Sparkles className="w-3 h-3" /> QRFlow Micro-Page
                 </div>
 
                 {/* Profile Avatar */}
@@ -175,7 +175,7 @@ export const MobilePagePreview: React.FC<MobilePagePreviewProps> = ({
                 </div>
 
                 <div className="pt-2 text-[10px] text-slate-500 font-medium">
-                  Powered by <span className="text-blue-400 font-bold">QRMix.app</span>
+                  Powered by <span className="text-blue-400 font-bold">QRFlow.app</span>
                 </div>
               </div>
             </motion.div>
