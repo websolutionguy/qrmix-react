@@ -1,0 +1,6 @@
+{
+  "name": "QRMix - Smart QR Code SaaS Platform",
+  "description": "Smart QR Codes, Dynamic Links, Mobile Landing Pages, and Real-Time Campaign Analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
