@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth }) => {
     { name: 'Features', path: '/#features', isAnchor: true, targetId: 'features' },
     { name: 'About', path: '/about-us', isAnchor: false },
     { name: 'Contact', path: '/contact-us', isAnchor: false },
-    { name: 'Pricing', path: '/#pricing', isAnchor: true, targetId: 'pricing' },
+    // { name: 'Pricing', path: '/#pricing', isAnchor: true, targetId: 'pricing' },
   ];
 
   const handleNavClick = (link: (typeof navLinks)[0]) => {

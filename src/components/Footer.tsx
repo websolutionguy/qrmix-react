@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onSuccessToast }) => {
     { name: 'QR Generator', id: 'generator' },
     { name: 'Analytics', id: 'analytics' },
     { name: 'Mobile Pages', id: 'mobile-pages' },
-    { name: 'Pricing', id: 'pricing' },
+    // { name: 'Pricing', id: 'pricing' },
   ];
 
   const companyAndLegalLinks = [
@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onSuccessToast }) => {
               Smart QR management, dynamic links, real-time campaign analytics, and no-code mobile landing page tools for modern businesses.
             </p>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-3 pt-2 hidden">
               <button
                 onClick={() => onSuccessToast('GitHub repository opened')}
                 className="w-8 h-8 rounded-lg bg-white/[0.05] hover:bg-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-colors cursor-pointer"
@@ -118,7 +118,7 @@ export const Footer: React.FC<FooterProps> = ({ onSuccessToast }) => {
           {/* Column 3: Platform */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">PLATFORM</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
               {platformLinks.map((link, idx) => (
                 <li key={idx}>
                   <button
