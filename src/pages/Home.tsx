@@ -8,6 +8,8 @@ import { MobilePagePreview } from '../components/MobilePagePreview';
 import { Pricing } from '../components/Pricing';
 import { CTA } from '../components/CTA';
 
+import { AdSenseBanner } from '../components/AdSenseBanner';
+
 interface HomeProps {
   onOpenAuth: (mode?: 'signin' | 'signup') => void;
   onSuccessToast: (msg: string, type?: 'success' | 'error' | 'info') => void;
@@ -33,6 +35,14 @@ export const Home: React.FC<HomeProps> = ({ onOpenAuth, onSuccessToast }) => {
         onOpenAuth={() => onOpenAuth('signup')}
       />
 
+      {/* <AdSenseBanner
+        client="ca-pub-9937097213144625"
+        slot="1234567890"
+        format="auto"
+        responsive={true}
+        className="my-8"
+      /> */}
+
       <QRGeneratorSection onSuccessToast={onSuccessToast} />
 
       <Features />
@@ -51,7 +61,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenAuth, onSuccessToast }) => {
         onSuccessToast={onSuccessToast}
       />
 
-      <Pricing onOpenAuth={onOpenAuth} onSuccessToast={onSuccessToast} />
+      {/* <Pricing onOpenAuth={onOpenAuth} onSuccessToast={onSuccessToast} /> */}
 
       <CTA
         onScrollToGenerator={() => scrollToSection('generator')}

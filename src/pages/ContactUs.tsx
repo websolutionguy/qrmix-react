@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import emailjs from '@emailjs/browser';
 import {
   ArrowLeft,
   Mail,
   MessageSquare,
-  Building,
   Send,
   CheckCircle2,
   Clock,
-  HelpCircle,
   AlertCircle,
+  Loader2,
 } from 'lucide-react';
 
 interface ContactUsProps {
@@ -18,6 +18,8 @@ interface ContactUsProps {
 }
 
 export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   useEffect(() => {
     document.title = 'QRMix | Contact Us';
   }, []);
@@ -31,6 +33,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -59,15 +62,34 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+
+    setLoading(true);
+
+    try {
+      // Replace these three strings with your EmailJS credentials
+      await emailjs.sendForm(
+        'service_qopmz0g',
+        'template_z4cz23k',
+        formRef.current!,
+        'HTgJsbQy8aQgvi-6n'
+      );
+
       setSubmitted(true);
       if (onSuccessToast) {
         onSuccessToast('Thanks! Your message has been received.', 'success');
       }
       setFormData({ fullName: '', email: '', subject: '', message: '' });
       setErrors({});
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      if (onSuccessToast) {
+        onSuccessToast('Failed to send message. Please try again.', 'error');
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -112,14 +134,13 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          {/* Contact Information Sidebar (5 cols) */}
+          {/* Contact Information Sidebar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="lg:col-span-5 space-y-6"
           >
-            {/* Email Channels Card */}
             <div className="bg-[#0D1426] border border-white/10 rounded-3xl p-7 space-y-5 shadow-xl">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <Mail className="w-5 h-5 text-blue-400" />
@@ -131,7 +152,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                     Technical & Campaign Support
                   </div>
-                  <div className="font-semibold text-white">support@example.com</div>
+                  <div className="font-semibold text-white">support@qrmix.us</div>
                   <div className="text-[11px] text-slate-400">Average response time: &lt; 2 hours</div>
                 </div>
 
@@ -139,7 +160,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                     Sales & Enterprise Inquiries
                   </div>
-                  <div className="font-semibold text-white">sales@example.com</div>
+                  <div className="font-semibold text-white">sales@qrmix.us</div>
                   <div className="text-[11px] text-slate-400">Custom dynamic high-volume routing</div>
                 </div>
 
@@ -147,13 +168,12 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                     Billing & Accounts
                   </div>
-                  <div className="font-semibold text-white">billing@example.com</div>
+                  <div className="font-semibold text-white">billing@qrmix.us</div>
                   <div className="text-[11px] text-slate-400">Invoices, tax forms, upgrades</div>
                 </div>
               </div>
             </div>
 
-            {/* Support Hours Card */}
             <div className="bg-[#0D1426] border border-white/10 rounded-3xl p-7 space-y-3 shadow-xl">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
                 <Clock className="w-4 h-4 text-emerald-400" />
@@ -165,7 +185,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
             </div>
           </motion.div>
 
-          {/* Contact Form Container (7 cols) */}
+          {/* Contact Form Container */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -191,7 +211,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                 <h3 className="text-xl font-bold text-white mb-2">Send Us a Message</h3>
 
                 {/* Full Name */}
@@ -206,6 +226,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   </label>
                   <input
                     type="text"
+                    name="user_name"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="e.g. Alex Morgan"
@@ -227,6 +248,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   </label>
                   <input
                     type="email"
+                    name="user_email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
@@ -248,6 +270,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   </label>
                   <input
                     type="text"
+                    name="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="e.g. Inquiry about Pro plan dynamic limits"
@@ -269,6 +292,7 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                   </label>
                   <textarea
                     rows={5}
+                    name="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us how we can help your campaign..."
@@ -281,10 +305,17 @@ export const ContactUs: React.FC<ContactUsProps> = ({ onSuccessToast }) => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-blue-600/25 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  disabled={loading}
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-blue-600/25 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Send Message</span>
+                  {loading ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Send Message</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
