@@ -121,7 +121,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               </button>
             </form>
 
-            <div className="relative my-6 text-center">
+            <div className="relative my-6 text-center hidden">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-white/10" />
               </div>
@@ -130,7 +130,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 hidden">
               <button
                 onClick={() => {
                   onSuccessToast('Google sign-in simulated!');
